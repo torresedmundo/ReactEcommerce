@@ -4,7 +4,6 @@ function CartWidget({cantProd}) {
     return (
         <>
         <img className="img-fluid tamImgCarrito" src={carrito} alt="imagen carrito" />
-       
         <span className="textBlanco ms-2">{cantProd}</span>
         </>
       );

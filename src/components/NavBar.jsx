@@ -2,7 +2,6 @@ import logo from '../logo.svg';
 import CartWidget from "./CartWidget";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css'
-import ItemListContainer from './ItemListContainer';
 
 
 function NavBar() {
@@ -31,14 +30,6 @@ function NavBar() {
                 </div>
             </div>
         </header>
-        <body>
-            <div className='container-fluid'>
-                <div className='row'>
-                    <ItemListContainer greeting={'Producto Prueba'}/>
-                </div>
-
-            </div>
-        </body>
         </>
       );
     }
