@@ -1,6 +1,6 @@
 import carrito from "../img/carrito.png";
 
-function CartWidget({cantProd}) {
+function CartWidget({cantProd, cont}) {
     return (
         <>
         <img className="img-fluid tamImgCarrito" src={carrito} alt="imagen carrito" />

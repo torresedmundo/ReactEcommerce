@@ -15,6 +15,10 @@
 .tamImgCarrito {
     width: 2.5rem; }
 
+.tamCardsProduct{
+  width: 12rem;
+}
+
 .fondoGradienteBanner{
   background: linear-gradient(to right, #991cd1, #d4307a);
 }
