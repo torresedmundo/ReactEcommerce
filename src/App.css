@@ -15,8 +15,20 @@
 .tamImgCarrito {
     width: 2.5rem; }
 
-.tamCardsProduct{
-  width: 12rem;
+.tamImgProducto {
+      width: 8rem;
+      margin: auto;
+      padding: 10px;
+    }
+
+      .tamCardsProduct{
+  width: 14rem;
+}
+
+.tamImgDetail{
+  width: 20rem;
+  display:block;
+  margin:auto;
 }
 
 .fondoGradienteBanner{

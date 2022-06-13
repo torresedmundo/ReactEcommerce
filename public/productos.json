@@ -1,0 +1,5 @@
+[
+    {"name": "MACBOOK PRO", "des": "Macbook Pro 512 GB", "stock": 26, "price":"clp $1.000.000", "id": 1, "pictureUrl": "url imagen ipad"},
+    {"name": "IPAD AIR", "des": "Macbook Pro 512 GB", "stock": 20, "price":"clp $700.000", "id": 2, "pictureUrl": "url imagen ipad"},
+    {"name": "AIR TAG", "des": "Macbook Pro 512 GB", "stock": 17, "price":"clp $30.000", "id": 3, "pictureUrl": "url imagen ipad"}
+]

@@ -18,7 +18,7 @@ export default function ItemCount({valInicial, stock, onAdd}) {
 
     return (
       <>
-      <div className='container-fluid col-md-2'>
+      <div className='container-fluid col-md-4'>
         <div className='row'>
             <p className='text-center mt-3'>Cantidad de productos a comprar</p>
             <div className='d-flex container text-center justify-content-center'>
