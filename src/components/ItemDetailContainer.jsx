@@ -1,24 +1,29 @@
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom';
 import ItemListDetail from './ItemListDetail';
 //import productosJson from './productos.json'
 
 
 const ItemDetailContainer = ({greeting}) => {
-  const [productos, setproductos] = useState ([])
+
+  const [productos, setProductos] = useState ([])
   const [loading, setLoading] =useState (true)
   const [error, setError] =useState (false)
+  const {id} = useParams ();
+
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-      setproductos([
-        {name: "Macbook Pro",  price: "clp $1.000.000", des: "MacBook Pro M1 8GB RAM 256GB SSD 13.3 Space Grey MYD82BE/A Un nuevo poder toma vuelo con el MacBook Pro M1 MYD82BE/A. El más liviano y delgado vuelve completamente renovado", id: 1, image: "/macbook1.png"}])
+      fetch('https://fakestoreapi.com/products')
+      .then(res=>res.json())
+      .then(res => setProductos(res.find(item => item.id == id)))
       .catch(error => {
         setLoading(false)
         setError(true)
         console.error("ERROR:", error)})
-      }, 1000);
-  })
+      }, 20);
+    },[id])
 console.log(productos);
   return (
     <>
@@ -33,3 +38,5 @@ console.log(productos);
 }
 
 export default ItemDetailContainer;
+
+

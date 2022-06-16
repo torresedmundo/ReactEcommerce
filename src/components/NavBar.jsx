@@ -1,23 +1,26 @@
 import logo from '../logo.svg';
 import CartWidget from "./CartWidget";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link, useParams } from 'react-router-dom';
 import '../App.css'
 
 
 function NavBar() {
-    return (
+    const {category} = useParams ();
+        return (
         <>
         <header className="fondoGradienteBanner container-fluid indexNav">
             <div className="row">
                 <div className="col-md-2 d-flex align-items-center">
                     <img src={logo} className="App-logo img-fluid tamImgHeader m-1" alt="logo header" />  
-                    <a className="nav-link active textBlanco" href="./index.html">MiEcommerce</a>
+                    <Link to="./" className="nav-link active  textBlanco fw-bold">MiEcommerce</Link>
                 </div>
                 <div className="col-md-6 d-flex align-items-center justify-content-center">
                     <div className="nav justify-content-end">
-                        <a className="nav-link active textBlanco" href="./index.html">Ofertas</a>
-                        <a className="nav-link active textBlanco" href="./index.html">Más Comprados</a>
-                        <a className="nav-link active textBlanco" href="./index.html">En su Mejor Precio</a>
+                    <Link to="./" className="nav-link active  textBlanco">Todos los Productos</Link>
+                    <Link to={'/categoria/jewelery'} className="nav-link active  textBlanco">Joyeria</Link>
+                    <Link to={'/categoria/'+category} className="nav-link active  textBlanco">Tecnología</Link>
+                    <Link to={'/categoria/'+category} className="nav-link active  textBlanco">Vestuario</Link>
                     </div>
                 </div>
                 <div className="col-md-2 d-flex align-items-center justify-content-start">
@@ -25,7 +28,7 @@ function NavBar() {
                 </div>
                 <div className="col-md-2 d-flex align-items-center justify-content-end text-secondary">
                     <div className="nav justify-content-end">
-                            <a className="nav-link active textBlanco" href="./login.html">Login</a>
+                        <Link to="./Producto/1" className="nav-link active textBlanco fw-bold">Login</Link>
                     </div>
                 </div>
             </div>
