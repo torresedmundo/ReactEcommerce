@@ -1,12 +1,11 @@
 import logo from '../logo.svg';
 import CartWidget from "./CartWidget";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../App.css'
 
 
 function NavBar() {
-    const {category} = useParams ();
         return (
         <>
         <header className="fondoGradienteBanner container-fluid indexNav">
@@ -18,9 +17,11 @@ function NavBar() {
                 <div className="col-md-6 d-flex align-items-center justify-content-center">
                     <div className="nav justify-content-end">
                     <Link to="./" className="nav-link active  textBlanco">Todos los Productos</Link>
-                    <Link to={'/categoria/jewelery'} className="nav-link active  textBlanco">Joyeria</Link>
-                    <Link to={'/categoria/'+category} className="nav-link active  textBlanco">Tecnología</Link>
-                    <Link to={'/categoria/'+category} className="nav-link active  textBlanco">Vestuario</Link>
+                    <Link to={'./categoria/jewelery'} className="nav-link active  textBlanco">Joyeria</Link>
+                    <Link to={'./categoria/electronics'} className="nav-link active  textBlanco">Tecnología</Link>
+                    <Link to={"./categoria/women's clothing"} className="nav-link active  textBlanco">Vestuario Mujer</Link>
+                    <Link to={"./categoria/men's clothing"} className="nav-link active  textBlanco">Vestuario Hombre</Link>
+
                     </div>
                 </div>
                 <div className="col-md-2 d-flex align-items-center justify-content-start">
